@@ -1,7 +1,7 @@
 getwd()
 setwd("/Users/tonye.cole/Documents/Personal Development/R/Spotify")
 getwd()
-spotify <- read.csv("data.csv")
+spotify <- read.csv("spotify.csv")
 head(spotify)
 summary(spotify)
 str(spotify)
