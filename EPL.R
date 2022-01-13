@@ -32,4 +32,5 @@ q <- p + geom_point(alpha=0.5) +
   #geom_text(hjust = 0, nudge_x = 0.05, aes(label = Name))
 ggplotly(q, tooltip = c(Name, xG, xA))
 #Attempting to allow name of the player to show when you hover over them
-  
+
+#Updated version
