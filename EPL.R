@@ -24,6 +24,12 @@ ui <- fluidPage(
     ),
     mainPanel(
       plotOutput('plot'),
+      plotlyOutput('plotly',
+        width = "100%",
+        height = "400px",
+        inline = FALSE,
+        reportTheme = TRUE
+      ),
       verbatimTextOutput('select')
     )
   )
@@ -40,19 +46,35 @@ server <- function(input, output) {
              extra = "drop", fill = "right") %>%
     mutate_if(is.character,as.factor)
   
+ output$plotly<- renderPlotly({
+   
+   d <- xg_xa %>%
+     filter(Position == input$select | Club == input$select)
+   
+   p <- ggplot(data= d, aes(x=xG, y=xA, colour=Position, text = Name)) + 
+     geom_point(alpha=0.5) + xlab("Expected Goals") + ylab("Expected Assists") 
+   
+   p + ggtitle("xG vs xA for each outfield player in the EPL 20/21")
+   #geom_text(hjust = 0, nudge_x = 0.05, aes(label = Name))
+   
+   ggplotly(p, tooltip = c("Name", "xG", "xA"))
+   
+ }, env = parent.frame(), quoted = FALSE)
   
-  output$plot <- renderPlot({
-    
-    xg_xa %>%
-      filter (input$select)
-
-    p <- ggplot(data= xg_xa,aes(x=xG, y=xA, colour=Position, text = Name)) + geom_point(alpha=0.5) + xlab("Expected Goals") + ylab("Expected Assists") 
-      
-    p + ggtitle("xG vs xA for each outfield player in the EPL 20/21")
-    #geom_text(hjust = 0, nudge_x = 0.05, aes(label = Name))
-    
-    ggplotly(p, tooltip = c("Name", "xG", "xA"))
-  })
+  # output$plot <- renderPlot({
+  #   
+  #   d <- xg_xa %>%
+  #     filter(Position == input$select | Club == input$select)
+  # 
+  # 
+  #   p <- ggplot(data= d, aes(x=xG, y=xA, colour=Position, text = Name)) + 
+  #     geom_point(alpha=0.5) + xlab("Expected Goals") + ylab("Expected Assists") 
+  #     
+  #   p + ggtitle("xG vs xA for each outfield player in the EPL 20/21")
+  #   #geom_text(hjust = 0, nudge_x = 0.05, aes(label = Name))
+  #   
+  #   ggplotly(p, tooltip = c("Name", "xG", "xA"))
+  # })
   
   output$select <- renderPrint({
     
