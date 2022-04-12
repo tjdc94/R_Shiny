@@ -1,0 +1,251 @@
+
+---
+title: " Minutes Open vs SalesForce Case Issue Type per Support Team Member over the last 3-months"
+subtitle: Created by TJ Cole
+output: html_document
+---
+
+The figures below are boxplots that show the spread between the time taken for different members of the support team to complete different tasks on SalesForce. Visualisations for Account Edits, Source Checks, Dashboards & User Management cases have been included.
+
+A boxplot divides data into quartiles. 
+
+* The box represents the middle 50% of values with the line representing the **median** value
+* The lower whisker represents the lower quartile (25th percentile)
+* The upper whisker represents the upper quartile (75th percentile)
+* Outliers are represented as dots
+
+**N.B.** Please note that large outliers are not displayed on the chart to see the **maximum** & **minimum** values please hover over each boxplot
+
+The total ticket count per case owner is displayed below each box
+
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(out.width= "100%", echo=FALSE, message=FALSE, warning=FALSE) 
+```
+
+
+```{r}
+source('~/Desktop/Signal_Redshift_Conn.R')
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(plotly)
+library(tidyr)
+library(scales)
+library(lubridate)
+library(rlang)
+
+qry <- "
+
+SELECT
+	*
+FROM
+	analytics.current_sf_cases
+WHERE
+	created_at >= CURRENT_DATE - interval '3 months'
+	AND(case_owner_email = 'ewa.gierlowska@signal-ai.com'
+		OR case_owner_email = 'stephani.pineda@signal-ai.com'
+		OR case_owner_email = 'alexandra.dulama@signal-ai.com'
+		OR case_owner_email = 'casey.jenson@signal-ai.com'
+		OR case_owner_email = 'michael.taiwo@signal-ai.com'
+		OR case_owner_email = 'callum.boyce@signal-ai.com'
+		OR case_owner_email = 'tonye.cole@signal-ai.com'
+		OR case_owner_email = 'tina.zeng@signal-ai.com'
+		OR case_owner_email = 'mabel.oreilly@signal-ai.com'
+		OR case_owner_email = 'chris.bonet@signal-ai.com'
+		OR case_owner_email = 'chrystal.wong@signal-ai.com'
+		OR case_owner_email = 'ben.jones@signal-ai.com')
+		-- change to IN with list
+ORDER BY
+	created_at DESC
+
+" 
+
+
+sf <- dbGetQuery(pconn_r, qry)
+
+#as.tbl(sf)
+
+is.integer64 <- function(x){
+  class(x)=="int64"
+} 
+
+
+d <- sf %>%
+  select(origin, minutes_open, issue_type, issue_detail, is_escalated, escalation_details, created_at, updated_at, case_owner_email) %>%
+  mutate(
+    created_at_date = as.POSIXct(created_at, format = "%d/%m/%Y %H:%M"),
+    week_number = lubridate::week(created_at_date)
+  ) %>%
+  mutate_if(bit64::is.integer64, as.integer)
+
+issue_type_filter <- (sf %>% count(issue_type, sort = TRUE) %>% pull(issue_type))[1:20]
+
+bg <- "#F9F9F9"
+
+
+```
+
+```{r, echo=FALSE, message=FALSE, out.width="100%"}
+
+ticket_count <- d %>% filter(issue_type %in% c('Account Edits')) %>% group_by(case_owner_email) %>% dplyr::summarise(total=n()) %>% dplyr::mutate(y=-100)
+
+p <- ggplot() +
+  geom_boxplot(data = d %>% filter(issue_type %in% c('Account Edits')),
+    aes(
+      x = case_owner_email,
+      y = minutes_open, 
+      fill= case_owner_email
+      )) + 
+  geom_text(data = ticket_count, 
+    aes(
+      x = case_owner_email,
+      y = -100,
+      label = paste0('Tickets \n', total)
+    )) +
+  coord_cartesian(ylim=c(-100,2000)) +
+  labs(title = 'Account Edits') +
+  xlab("") + ylab("Minutes Open") + 
+  theme(panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = bg, colour = bg),
+        panel.background = element_rect(fill = bg, colour = bg),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        plot.title = element_text(size = 18, hjust = .5),
+        plot.subtitle = element_text(size = 14),
+        axis.line = element_line(colour = 'black'),
+        legend.background = element_rect(fill = bg),
+        legend.title = element_blank(),
+        text = element_text(family = "Andale Mono"))
+
+ggplotly(data = p, tooltip = c('text')) %>%
+plotly::config(displayModeBar = F) %>%
+layout(
+    title = list(text = paste0('Account Edits')),
+    hoverlabel = list(font = list(family = 'Andale Mono', size = 12), bgcolor = bg)
+    )
+```
+
+```{r, echo=FALSE, message=FALSE, out.width="100%"}
+
+ticket_count <- d %>% filter(issue_type %in% c('Dashboards')) %>% group_by(case_owner_email) %>% dplyr::summarise(total=n()) %>% dplyr::mutate(y=-100)
+
+p <- ggplot() +
+  geom_boxplot(data = d %>% filter(issue_type %in% c('Dashboards')),
+    aes(
+      x = case_owner_email,
+      y = minutes_open, 
+      fill=case_owner_email
+      )) + 
+  geom_text(data = ticket_count, aes(
+    x = case_owner_email,
+    y = -100,
+    label = paste0('Tickets \n', total)
+    
+    )) +
+  coord_cartesian(ylim=c(-100,2000)) +
+  labs(title = 'Dashboards') +
+  xlab("") + ylab("Minutes Open") + 
+  theme(panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = bg, colour = bg),
+        panel.background = element_rect(fill = bg, colour = bg),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        plot.title = element_text(size = 18, hjust = .5),
+        plot.subtitle = element_text(size = 14),
+        axis.line = element_line(colour = 'black'),
+        legend.background = element_rect(fill = bg),
+        legend.title = element_blank(),
+        text = element_text(family = "Andale Mono"))
+
+ggplotly(p, tooltip = c('text')) %>%
+  plotly::config(displayModeBar = F) %>%
+  layout(
+    #title = list(text = paste0('Account Edits')),
+    hoverlabel = list(font = list(family = 'Andale Mono', size = 12), bgcolor = bg)
+  )
+```
+
+```{r}
+
+ticket_count <- d %>% filter(issue_type %in% c('Source check')) %>% group_by(case_owner_email) %>% dplyr::summarise(total=n()) %>% dplyr::mutate(y=-1000)
+
+p <- ggplot() +
+  geom_boxplot(data = d %>% filter(issue_type %in% c('Source check')),
+    aes(
+      x = case_owner_email,
+      y = minutes_open, 
+      fill= case_owner_email
+      )) + 
+  geom_text(data = ticket_count, 
+    aes(
+      x = case_owner_email,
+      y = -1000,
+      label = paste0('Tickets \n', total)
+    )) +
+  coord_cartesian(ylim=c(-1000,20000)) +
+  labs(title = 'Source Checks') +
+  xlab("") + ylab("Minutes Open") + 
+  theme(panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = bg, colour = bg),
+        panel.background = element_rect(fill = bg, colour = bg),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        plot.title = element_text(size = 18, hjust = .5),
+        plot.subtitle = element_text(size = 14),
+        axis.line = element_line(colour = 'black'),
+        legend.background = element_rect(fill = bg),
+        legend.title = element_blank(),
+        text = element_text(family = "Andale Mono"))
+
+ggplotly(data = p, tooltip = c('text')) %>%
+plotly::config(displayModeBar = F) %>%
+layout(
+    title = list(text = paste0('Source Check')),
+    hoverlabel = list(font = list(family = 'Andale Mono', size = 12), bgcolor = bg)
+    )
+```
+
+```{r}
+
+ticket_count <- d %>% filter(issue_type %in% c('User Management')) %>% group_by(case_owner_email) %>% dplyr::summarise(total=n()) %>% dplyr::mutate(y=-30)
+
+p <- ggplot() +
+  geom_boxplot(data = d %>% filter(issue_type %in% c('User Management')),
+    aes(
+      x = case_owner_email,
+      y = minutes_open, 
+      fill=case_owner_email
+      )) + 
+  geom_text(data = ticket_count, aes(
+    x = case_owner_email,
+    y = -30,
+    label = paste0('Tickets \n', total)
+    
+    )) +
+  coord_cartesian(ylim=c(-30,400)) +
+  labs(title = 'User Management') +
+  xlab("") + ylab("Minutes Open") + 
+  theme(panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = bg, colour = bg),
+        panel.background = element_rect(fill = bg, colour = bg),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        plot.title = element_text(size = 18, hjust = .5),
+        plot.subtitle = element_text(size = 14),
+        axis.line = element_line(colour = 'black'),
+        legend.background = element_rect(fill = bg),
+        legend.title = element_blank(),
+        text = element_text(family = "Andale Mono"))
+
+ggplotly(p, tooltip = c('text')) %>%
+  plotly::config(displayModeBar = F) %>%
+  layout(
+    #title = list(text = paste0('Account Edits')),
+    hoverlabel = list(font = list(family = 'Andale Mono', size = 12), bgcolor = bg)
+  )
+```

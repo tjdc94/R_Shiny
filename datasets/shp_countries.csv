@@ -1,0 +1,247 @@
+,Shapefile Countries,Countries (Happy),Lookup,Entity,Lookup 2
+1,Albania,Ivory Coast,Cote d'Ivoire,Afghanistan,Afghanistan
+2,Algeria,Congo (Kinshasa),Democratic Republic of the Congo,Africa Eastern and Southern,#N/A
+3,American Samoa,Libya,Libyan Arab Jamahiriya,Africa Western and Central,#N/A
+4,Angola,Laos,Lao People's Democratic Republic,Albania,Albania
+5,Antigua and Barbuda,Congo (Brazzaville),Congo,Algeria,Algeria
+6,Argentina,Moldova,Republic of Moldova,Angola,#N/A
+7,Armenia,Kosovo,Kosovo,Antigua and Barbuda,#N/A
+8,Australia,Myanmar,Burma,Arab World,#N/A
+9,Azerbaijan,Iran,Iran (Islamic Republic of),Argentina,Argentina
+10,Bahamas,South Korea,"Korea, Republic of",Armenia,Armenia
+11,Bahrain,North Macedonia,The former Yugoslav Republic of Macedonia,Aruba,#N/A
+12,Bangladesh,South Sudan,South Sudan,Australia,Australia
+13,Barbados,Northern Cyprus,Northern Cyprus,Austria,Austria
+14,Belize,Syria,Syrian Arab Republic,Azerbaijan,Azerbaijan
+15,Bermuda,Palestinian Territories,Palestine,Bahamas,#N/A
+16,Bolivia,Trinidad & Tobago,Trinidad and Tobago,Bahrain,Bahrain
+17,Bosnia and Herzegovina,Tanzania,United Republic of Tanzania,Bangladesh,Bangladesh
+18,Burma,Vietnam,Vietnam,Barbados,#N/A
+19,Benin,Zimbabwe,Zimbabwe,Belarus,Belarus
+20,Solomon Islands,Zambia,Zambia,Belgium,Belgium
+21,Brazil,Yemen,Yemen,Belize,#N/A
+22,Bulgaria,Venezuela,Venezuela,Benin,Benin
+23,Brunei Darussalam,Uzbekistan,Uzbekistan,Bermuda,#N/A
+24,Canada,Uruguay,Uruguay,Bhutan,Bhutan
+25,Cambodia,United States,United States,Bolivia,Bolivia
+26,Sri Lanka,United Kingdom,United Kingdom,Bosnia and Herzegovina,Bosnia and Herzegovina
+27,Congo,United Arab Emirates,United Arab Emirates,Botswana,Botswana
+28,Democratic Republic of the Congo,Ukraine,Ukraine,Brazil,Brazil
+29,Burundi,Uganda,Uganda,Brunei,#N/A
+30,China,Turkmenistan,Turkmenistan,Bulgaria,Bulgaria
+31,Afghanistan,Turkey,Turkey,Burkina Faso,Burkina Faso
+32,Bhutan,Tunisia,Tunisia,Burundi,Burundi
+33,Chile,Togo,Togo,Cambodia,Cambodia
+34,Cayman Islands,Thailand,Thailand,Cameroon,Cameroon
+35,Cameroon,Tajikistan,Tajikistan,Canada,Canada
+36,Chad,Taiwan,Taiwan,Cape Verde,#N/A
+37,Comoros,Switzerland,Switzerland,Caribbean Small States,#N/A
+38,Colombia,Sweden,Sweden,Cayman Islands,#N/A
+39,Costa Rica,Swaziland,Swaziland,Central African Republic,Central African Republic
+40,Central African Republic,Sri Lanka,Sri Lanka,Central Europe and the Baltics,#N/A
+41,Cuba,Spain,Spain,Chad,Chad
+42,Cape Verde,South Africa,South Africa,Chile,Chile
+43,Cook Islands,Somalia,Somalia,China,China
+44,Cyprus,Slovenia,Slovenia,Colombia,Colombia
+45,Denmark,Slovakia,Slovakia,Comoros,Comoros
+46,Djibouti,Singapore,Singapore,Congo,#N/A
+47,Dominica,Sierra Leone,Sierra Leone,Costa Rica,Costa Rica
+48,Dominican Republic,Serbia,Serbia,Cote d'Ivoire,#N/A
+49,Ecuador,Senegal,Senegal,Croatia,Croatia
+50,Egypt,Saudi Arabia,Saudi Arabia,Curacao,#N/A
+51,Ireland,Rwanda,Rwanda,Cyprus,Cyprus
+52,Equatorial Guinea,Russia,Russia,Czechia,#N/A
+53,Estonia,Romania,Romania,Democratic Republic of Congo,#N/A
+54,Eritrea,Qatar,Qatar,Denmark,Denmark
+55,El Salvador,Portugal,Portugal,Djibouti,#N/A
+56,Ethiopia,Poland,Poland,Dominica,#N/A
+57,Austria,Philippines,Philippines,Dominican Republic,Dominican Republic
+58,Czech Republic,Peru,Peru,Early-demographic dividend,#N/A
+59,French Guiana,Paraguay,Paraguay,East Asia & Pacific,#N/A
+61,Fiji,Pakistan,Pakistan,East Asia & Pacific (excluding high income),#N/A
+60,Finland,Panama,Panama,East Asia & Pacific (IDA & IBRD),#N/A
+62,Falkland Islands (Malvinas),Norway,Norway,Ecuador,Ecuador
+63,"Micronesia, Federated States of",Nigeria,Nigeria,Egypt,Egypt
+64,French Polynesia,Niger,Niger,El Salvador,El Salvador
+65,France,Nicaragua,Nicaragua,Equatorial Guinea,#N/A
+66,Gambia,New Zealand,New Zealand,Estonia,Estonia
+67,Gabon,Netherlands,Netherlands,Eswatini,#N/A
+68,Georgia,Nepal,Nepal,Ethiopia,Ethiopia
+69,Ghana,Namibia,Namibia,Euro area,#N/A
+70,Grenada,Mozambique,Mozambique,Europe & Central Asia,#N/A
+72,Germany,Montenegro,Montenegro,Europe & Central Asia (excluding high income),#N/A
+71,Greenland,Morocco,Morocco,Europe & Central Asia (IDA & IBRD),#N/A
+73,Guam,Mongolia,Mongolia,European Union,#N/A
+74,Greece,Mexico,Mexico,Fiji,#N/A
+75,Guatemala,Mauritius,Mauritius,Finland,Finland
+76,Guinea,Mauritania,Mauritania,France,France
+77,Guyana,Malta,Malta,Gabon,Gabon
+78,Haiti,Mali,Mali,Gambia,Gambia
+79,Honduras,Malaysia,Malaysia,Georgia,Georgia
+80,Croatia,Malawi,Malawi,Germany,Germany
+81,Hungary,Madagascar,Madagascar,Ghana,Ghana
+82,Iceland,Luxembourg,Luxembourg,Greece,Greece
+83,India,Lithuania,Lithuania,Grenada,#N/A
+84,Iran (Islamic Republic of),Liberia,Liberia,Guatemala,Guatemala
+85,Israel,Lesotho,Lesotho,Guinea,Guinea
+86,Italy,Lebanon,Lebanon,Guinea-Bissau,#N/A
+87,Cote d'Ivoire,Latvia,Latvia,Guyana,#N/A
+88,Iraq,Kyrgyzstan,Kyrgyzstan,Haiti,Haiti
+89,Japan,Kuwait,Kuwait,Heavily indebted poor countries (HIPC),#N/A
+90,Jamaica,Kenya,Kenya,High income,#N/A
+91,Jordan,Kazakhstan,Kazakhstan,Honduras,Honduras
+92,Kenya,Jordan,Jordan,Hong Kong,Hong Kong
+93,Kyrgyzstan,Japan,Japan,Hungary,Hungary
+94,"Korea, Democratic People's Republic of",Jamaica,Jamaica,IBRD only,#N/A
+99,Lao People's Democratic Republic,Indonesia,Indonesia,Iceland,Iceland
+95,Kiribati,Italy,Italy,IDA & IBRD total,#N/A
+96,"Korea, Republic of",Israel,Israel,IDA blend,#N/A
+97,Kuwait,Ireland,Ireland,IDA only,#N/A
+98,Kazakhstan,Iraq,Iraq,IDA total,#N/A
+100,Lebanon,India,India,India,India
+101,Latvia,Iceland,Iceland,Indonesia,Indonesia
+102,Belarus,Hungary,Hungary,Iran,Iran
+103,Lithuania,Hong Kong,Hong Kong,Iraq,Iraq
+104,Liberia,Honduras,Honduras,Ireland,Ireland
+105,Slovakia,Haiti,Haiti,Israel,Israel
+106,Liechtenstein,Guinea,Guinea,Italy,Italy
+107,Libyan Arab Jamahiriya,Guatemala,Guatemala,Jamaica,Jamaica
+108,Madagascar,Greece,Greece,Japan,Japan
+109,Martinique,Ghana,Ghana,Jordan,Jordan
+110,Mongolia,Germany,Germany,Kazakhstan,Kazakhstan
+111,Montserrat,Georgia,Georgia,Kenya,Kenya
+112,The former Yugoslav Republic of Macedonia,Gambia,Gambia,Kiribati,#N/A
+113,Mali,Gabon,Gabon,Kosovo,Kosovo
+114,Morocco,France,France,Kuwait,Kuwait
+115,Mauritius,Finland,Finland,Kyrgyzstan,Kyrgyzstan
+116,Mauritania,Ethiopia,Ethiopia,Laos,Laos
+117,Malta,Estonia,Estonia,Late-demographic dividend,#N/A
+118,Oman,El Salvador,El Salvador,Latin America & Caribbean,#N/A
+120,Mexico,Ecuador,Ecuador,Latin America & Caribbean (excluding high income),#N/A
+119,Maldives,Egypt,Egypt,Latin America & Caribbean (IDA & IBRD),#N/A
+121,Malaysia,Dominican Republic,Dominican Republic,Latvia,Latvia
+122,Mozambique,Denmark,Denmark,Least developed countries: UN classification,#N/A
+123,Malawi,Czech Republic,Czech Republic,Lebanon,Lebanon
+124,New Caledonia,Cyprus,Cyprus,Lesotho,Lesotho
+125,Niue,Croatia,Croatia,Liberia,Liberia
+126,Niger,Costa Rica,Costa Rica,Libya,Libya
+127,Aruba,Comoros,Comoros,Lithuania,Lithuania
+128,Anguilla,Colombia,Colombia,Low & middle income,#N/A
+129,Belgium,China,China,Lower middle income,#N/A
+130,Hong Kong,Chile,Chile,Luxembourg,Luxembourg
+131,Northern Mariana Islands,Chad,Chad,Macao,#N/A
+132,Faroe Islands,Central African Republic,Central African Republic,Madagascar,Madagascar
+133,Andorra,Canada,Canada,Malawi,Malawi
+134,Gibraltar,Cameroon,Cameroon,Malaysia,Malaysia
+135,Isle of Man,Cambodia,Cambodia,Maldives,#N/A
+136,Luxembourg,Burundi,Burundi,Mali,Mali
+137,Macau,Burkina Faso,Burkina Faso,Malta,Malta
+138,Monaco,Bulgaria,Bulgaria,Marshall Islands,#N/A
+139,Palestine,Brazil,Brazil,Mauritania,Mauritania
+140,Montenegro,Botswana,Botswana,Mauritius,Mauritius
+141,Mayotte,Bosnia and Herzegovina,Bosnia and Herzegovina,Mexico,Mexico
+142,Åland Islands,Bolivia,Bolivia,Micronesia (country),#N/A
+143,Norfolk Island,Bhutan,Bhutan,Middle East & North Africa,#N/A
+145,Antarctica,Belgium,Belgium,Middle East & North Africa (excluding high income),#N/A
+144,Cocos (Keeling) Islands,Benin,Benin,Middle East & North Africa (IDA & IBRD),#N/A
+146,Bouvet Island,Belarus,Belarus,Middle income,#N/A
+147,French Southern and Antarctic Lands,Bangladesh,Bangladesh,Moldova,Moldova
+148,Heard Island and McDonald Islands,Bahrain,Bahrain,Mongolia,Mongolia
+149,British Indian Ocean Territory,Azerbaijan,Azerbaijan,Montenegro,Montenegro
+150,Christmas Island,Austria,Austria,Morocco,Morocco
+151,United States Minor Outlying Islands,Australia,Australia,Mozambique,Mozambique
+152,Vanuatu,Armenia,Armenia,Myanmar,Myanmar
+153,Nigeria,Argentina,Argentina,Namibia,Namibia
+154,Netherlands,Algeria,Algeria,Nauru,#N/A
+155,Norway,Albania,Albania,Nepal,Nepal
+156,Nepal,Afghanistan,Afghanistan,Netherlands,Netherlands
+157,Botswana,,,New Zealand,New Zealand
+158,British Virgin Islands,,,Nicaragua,Nicaragua
+159,Burkina Faso,,,Niger,Niger
+160,Guadeloupe,,,Nigeria,Nigeria
+161,Guernsey,,,North America,#N/A
+162,Guinea-Bissau,,,North Macedonia,North Macedonia
+163,Holy See (Vatican City),,,Norway,Norway
+164,Indonesia,,,OECD members,#N/A
+165,Jersey,,,Oman,#N/A
+166,Lesotho,,,Other small states,#N/A
+167,Marshall Islands,,,Pacific island small states,#N/A
+168,Namibia,,,Pakistan,Pakistan
+169,Nauru,,,Palau,#N/A
+170,Netherlands Antilles,,,Palestine,#N/A
+171,New Zealand,,,Panama,Panama
+172,Nicaragua,,,Papua New Guinea,#N/A
+173,Pakistan,,,Paraguay,Paraguay
+174,Palau,,,Peru,Peru
+175,Panama,,,Philippines,Philippines
+176,Papua New Guinea,,,Poland,Poland
+177,Paraguay,,,Portugal,Portugal
+178,Peru,,,Post-demographic dividend,#N/A
+179,Philippines,,,Pre-demographic dividend,#N/A
+180,Pitcairn Islands,,,Puerto Rico,#N/A
+181,Poland,,,Qatar,Qatar
+182,Portugal,,,Romania,Romania
+183,Puerto Rico,,,Russia,Russia
+184,Qatar,,,Rwanda,Rwanda
+185,Republic of Moldova,,,Saint Kitts and Nevis,#N/A
+186,Reunion,,,Saint Lucia,#N/A
+187,Romania,,,Saint Vincent and the Grenadines,#N/A
+188,Russia,,,Samoa,#N/A
+189,Rwanda,,,San Marino,#N/A
+190,Saint Barthelemy,,,Sao Tome and Principe,#N/A
+191,Saint Helena,,,Saudi Arabia,Saudi Arabia
+192,Saint Kitts and Nevis,,,Senegal,Senegal
+193,Saint Lucia,,,Serbia,Serbia
+194,Saint Martin,,,Seychelles,#N/A
+195,Saint Pierre and Miquelon,,,Sierra Leone,Sierra Leone
+196,Saint Vincent and the Grenadines,,,Singapore,Singapore
+197,Samoa,,,Sint Maarten (Dutch part),#N/A
+198,San Marino,,,Slovakia,Slovakia
+199,Sao Tome and Principe,,,Slovenia,Slovenia
+200,Saudi Arabia,,,Small states,#N/A
+201,Senegal,,,Solomon Islands,#N/A
+202,Serbia,,,Somalia,Somalia
+203,Seychelles,,,South Africa,South Africa
+204,Sierra Leone,,,South Asia,#N/A
+205,Singapore,,,South Asia (IDA & IBRD),#N/A
+206,Slovenia,,,South Korea,South Korea
+207,Somalia,,,Spain,Spain
+208,South Africa,,,Sri Lanka,Sri Lanka
+209,South Georgia South Sandwich Islands,,,Sub-Saharan Africa,#N/A
+211,Sudan,,,Sub-Saharan Africa (excluding high income),#N/A
+210,Spain,,,Sub-Saharan Africa (IDA & IBRD),#N/A
+212,Suriname,,,Sudan,#N/A
+213,Svalbard,,,Suriname,#N/A
+214,Swaziland,,,Sweden,Sweden
+215,Sweden,,,Switzerland,Switzerland
+216,Switzerland,,,Tajikistan,Tajikistan
+217,Syrian Arab Republic,,,Tanzania,Tanzania
+218,Taiwan,,,Thailand,Thailand
+219,Tajikistan,,,Timor,#N/A
+220,Thailand,,,Togo,Togo
+221,Timor-Leste,,,Tonga,#N/A
+222,Togo,,,Trinidad and Tobago,#N/A
+223,Tokelau,,,Tunisia,Tunisia
+224,Tonga,,,Turkey,Turkey
+225,Trinidad and Tobago,,,Turkmenistan,Turkmenistan
+226,Tunisia,,,Turks and Caicos Islands,#N/A
+227,Turkey,,,Tuvalu,#N/A
+228,Turkmenistan,,,Uganda,Uganda
+229,Turks and Caicos Islands,,,Ukraine,Ukraine
+230,Tuvalu,,,United Arab Emirates,United Arab Emirates
+231,Uganda,,,United Kingdom,United Kingdom
+232,Ukraine,,,United States,United States
+233,United Arab Emirates,,,Upper middle income,#N/A
+234,United Kingdom,,,Uruguay,Uruguay
+235,United Republic of Tanzania,,,Uzbekistan,Uzbekistan
+236,United States,,,Vanuatu,#N/A
+237,United States Virgin Islands,,,Vietnam,Vietnam
+238,Uruguay,,,World,#N/A
+239,Uzbekistan,,,Zambia,Zambia
+240,Venezuela,,,Zimbabwe,Zimbabwe
+241,Viet Nam,,,,#N/A
+242,Wallis and Futuna Islands,,,,#N/A
+243,Western Sahara,,,,#N/A
+244,Yemen,,,,#N/A
+245,Zambia,,,,#N/A
+246,Zimbabwe,,,,#N/A

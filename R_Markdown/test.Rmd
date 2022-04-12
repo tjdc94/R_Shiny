@@ -1,0 +1,28 @@
+# Cars Visualisation  
+## By TJ Cole
+ 
+ 
+ **Part 1**
+ 
+ ```{r}
+ data (cars)
+ summary(cars$dist)
+ summary(cars$dist)
+ str(cars)
+ plot(cars)
+ ```
+ 
+ **Part 2**
+ 
+ ```{r}
+ hist(cars$speed)
+ boxplot (cars$dist)
+ ```
+ 
+ 
+ There were `r nrow(cars)` cars studied.  
+ the mean speed of cars was `r mean(cars$speed)`
+ 
+ 
+# THE END
+ 

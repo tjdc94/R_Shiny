@@ -12,8 +12,8 @@ library("rsconnect")
 #deployApp()
 
 #Global Variables
-setwd("/Users/tonye.cole/Documents/GitHub/R_Shiny")
-epl <- read.csv("EPL_20_21.csv", stringsAsFactors=FALSE)
+
+epl <- read.csv("https://raw.githubusercontent.com/tjdc94/R_Shiny/main/EPL_20_21.csv", stringsAsFactors=FALSE)
 
 
 #UI Code

@@ -1,0 +1,14 @@
+name: R_Shiny
+title: R_Shiny
+username:
+account: tjdc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5573783
+bundleId: 5539155
+url: https://tjdc.shinyapps.io/R_Shiny/
+when: 1643901542.00279
+lastSyncTime: 1643901542.00282
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|app.R|data.csv|EPL_20_21.csv|fpl_dataset.csv|Sam&TJ_S1.R|Sam&TJ_S2.R
